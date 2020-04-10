@@ -46,17 +46,17 @@
 				<script>
 
 				//Building the rest of the table/the game board 
-                for (var row=0; row<=5; row++) //6 rows
-                {
-					document.writeln("<tr>");	//starting new row 
-                    for (var col=0; col<=6; col++) //7 columns
-                    {
+				for (var row=0; row<=5; row++) //6 rows
+				{
+					document.writeln("<tr>"); //starting new row 
+				 	for (var col=0; col<=6; col++) //7 columns
+					{
 						document.writeln("<td id='board_" + row + "_"+ col +"'></td>"); //creating the table locations/spots and create the column id called board will be used in the connect_four.js					
 					}
-					document.writeln("</tr>");	//ending row
+					document.writeln("</tr>"); //ending row
 				}											
 				</script>
-            </table>
+            		</table>
 		</div>
 	</body>
 </html>
