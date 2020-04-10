@@ -9,6 +9,7 @@ player_color[2] = "blue";
 
 function begin_game(player_choice) 
 {
+  draw = 0;
   enable_button();
   if (game_status==true)
   {
@@ -49,7 +50,6 @@ function tracking_player_turn()
 function random()
 {
   num=Math.floor(Math.random()*2)+1;
-  console.log(num);
   if(num==1)
   {
     begin_game(1);
@@ -82,6 +82,7 @@ function check_win()
     game_status = false;
     document.getElementById('game_info').innerHTML = "No Winner";
     disable_button();
+    draw = 0;
   }
 
   //Left to right 
