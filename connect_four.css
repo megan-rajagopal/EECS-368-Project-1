@@ -1,6 +1,7 @@
 .piece 
 {
-  height: 32px;
+  /* creating the token pieces so they appear round on the board */
+  height: 32px; 
   width: 32px;
   display:block;
   border-radius: 16px;
@@ -10,10 +11,12 @@
 
 .player1 
 {
+  /*creating player 1 color*/
   background-color: thistle;
 }
 
 .player2 
 {
+  /*creating the player 2 color*/
   background-color: rgb(0, 119, 255);	
 }
