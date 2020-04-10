@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Connect Four</title>
+		<script src = "connect_four.js"></script>
+        <link href = "connect_four.css"
+        rel="stylesheet"
+        type="text/css"/>	
+	</head>
+	<body>
+		<h1>Connect Four</h1>
+		<p> The objective of the game is to get four of your color circles in a uninterrupted line. The line can be straight or diagnol <br>
+			This game is a player vs player game. So, you and your opponent choose your color and who will start first. <br>
+			To start the game press the color that will start the game or press random to have a random player start. <br>
+			After the game ends, press the color that you want to start the next game or press random to have a random player start. <br>
+			If you wish to reset the boar in the middle of a game, refresh the browser. 
+		</p>
+		<button id="purple_player" onclick="begin_game(1);">Purple</button>
+		<button id="blue_player" onclick="begin_game(2);">Blue</button>
+		<button id="random_player" onclick="random();">Random</button>
+		<br>
+		<br>
+		<div id="game_board"> 
+			<div id="game_info">
+            </div>
+			<table id="table">
+				<thead>
+					<tr>
+						<td><button id="drop0" onclick="drop_token(0);">Drop</button></td>
+						<td><button id="drop1" onclick="drop_token(1);">Drop</button></td>
+						<td><button id="drop2" onclick="drop_token(2);">Drop</button></td>
+						<td><button id="drop3" onclick="drop_token(3);">Drop</button></td>
+						<td><button id="drop4" onclick="drop_token(4);">Drop</button></td>
+						<td><button id="drop5" onclick="drop_token(5);">Drop</button></td>
+						<td><button id="drop6" onclick="drop_token(6);">Drop</button></td>
+					</tr>
+				</thead>
+				<script>
+                for (var row=0; row<=5; row++) //6 rows
+                {
+					document.writeln("<tr>");	//starting row 
+                    for (var col=0; col<=6; col++) //7 columns
+                    {
+						document.writeln("<td id='board_" + row + "_"+ col +"'></td>");							
+					}
+					document.writeln("</tr>");	//ending row
+				}											
+				</script>
+            </table>
+		</div>
+	</body>
+</html>
